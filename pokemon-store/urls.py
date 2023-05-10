@@ -1,6 +1,6 @@
 from django.urls import path
 
-from livraria import views
+from lojinha import views
 
 urlpatterns = [
     path('', views.index, name='index'),

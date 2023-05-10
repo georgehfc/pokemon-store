@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, TemplateView
 
-from livraria.models import Livro, Autor, Categoria
+from pokemon.models import Livro, Autor, Categoria
 
 
 def index(request):
