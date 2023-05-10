@@ -1,0 +1,40 @@
+{% extends "base_template.html" %}
+
+{% block title %}<title>Autores | Livraria Online</title>{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Autores</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <h4 class="card-title">Autores</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    {% if autor_list %}
+      {% for autor in autor_list %}
+        <div class="col-md-4 mb-5">
+          <div class="card" style="width: 18rem;">
+            <img src="/static/images/autor.png" class="card-img-top" alt="Foto do autor">
+            <div class="card-body">
+              <h5 class="card-title">{{ autor.name }}</h5>
+              <p class="card-text">{{ autor.bio }}</p>
+              <a href="{{ autor.get_absolute_url }}" class="btn btn-primary">Ver livros</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>Não encontrei nenhum autor cadastrado!</p>
+    {% endif %}
+  </div>
+
+{% endblock %}
