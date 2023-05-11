@@ -1,0 +1,40 @@
+{% extends "base_template.html" %}
+
+{% block title %}<title>Pokeballs | Pokemon Store</title>{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Pokeballs</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <h4 class="card-title">Pokeballs</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    {% if pokeball_list %}
+      <div class="col-md-4 mb-5">
+        {% for pokeball in pokeball_list %}
+          <div class="card" style="width: 18rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5GgYaSH5F-GU5J4QAAAmZbwM5QAREEUfVA&usqp=CAU" class="card-img-top" alt="Ultra Ball">
+            <div class="card-body">
+              <h5 class="card-title">{{ pokeball.name }}</h5>
+              <p class="card-text">{{ pokeball.catch_rate }}</p>
+              <a href="{{ pokeball.get_absolute_url }}" class="btn btn-dark">Check it out</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>We are missing Pokeballs.</p>
+    {% endif %}
+  </div>
+
+{% endblock %}

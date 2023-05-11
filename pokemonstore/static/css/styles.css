@@ -1,0 +1,30 @@
+.gradient {
+  background: linear-gradient(-45deg, #380036, #74efff, #0CBABA);
+  background-size: 400% 400%;
+  animation: gradient-bg 20s ease infinite;
+  position: relative;
+}
+
+@keyframes gradient-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.noise-image {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  background-image: url("https://stackdiary.com/wp-content/uploads/2022/10/noise_img.png");
+  background-position: 0px 0px;
+  background-size: auto;
+  opacity: 0.5;
+}

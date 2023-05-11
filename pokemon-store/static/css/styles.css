@@ -1,8 +1,0 @@
-.imagem-livros {
-  background-image: url('/static/images/livros-estante.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 500px;
-  position: relative;
-}

@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pokemon-store.urls')),
+    path('', include('pokemonstore.urls')),
 ]

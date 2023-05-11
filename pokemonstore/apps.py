@@ -1,6 +1,5 @@
 from django.apps import AppConfig
 
-
-class PokemonStoreConfig(AppConfig):
+class PokemonstoreConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'pokemon-store'
+    name = 'pokemonstore'

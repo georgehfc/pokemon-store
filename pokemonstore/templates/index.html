@@ -1,6 +1,6 @@
 {% extends "base_template.html" %}
 
-{% block title %}<title>Home | Livraria Online</title>{% endblock %}
+{% block title %}<title>Home | Pokemon-Store</title>{% endblock %}
 
 {% block content %}
   <div class="row">
@@ -15,15 +15,14 @@
     <div class="col-md-12 mb-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Bem-vindo a Livraria Online!</h5>
-          <p class="card-text">Veja um resumo do nosso catálogo atualmente e aproveite!</p>
+          <h5 class="card-title">Gotta Catch 'Em All!</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">{{ quantidade_livros }} Livros</li>
-          <li class="list-group-item">{{ quantidade_autores }} Autores</li>
+          <li class="list-group-item">{{ all_pokemon }} Pokemons</li>
+          <li class="list-group-item">{{ all_pokeball }} Pokeballs</li>
         </ul>
-        <div class="card-body">
-          <div class="imagem-livros"></div>
+        <div class="card-body gradient">
+          <div class="noise-image"></div>
         </div>
       </div>
     </div>

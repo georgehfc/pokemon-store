@@ -1,33 +1,33 @@
 {% extends "base_template.html" %}
 
-{% block title %}<title>Categorias | Livraria Online</title>{% endblock %}
+{% block title %}<title>Pokemons | Pokemon Store</title>{% endblock %}
 
 {% block content %}
   <div class="row">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+        <li class="breadcrumb-item active" aria-current="page">Pokemons</li>
       </ol>
     </nav>
   </div>
 
   <div class="row">
     <div class="col-md-12 mb-3">
-      <h4 class="card-title">Categorias</h4>
+      <h4 class="card-title">Pokemons</h4>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12 mb-3">
-      {% if categoria_list %}
+      {% if pokemon_list %}
         <div class="list-group">
-          {% for categoria in categoria_list %}
-            <a href="{{ categoria.get_absolute_url }}" class="list-group-item list-group-item-action">{{ categoria.nome }}</a>
+          {% for pokemon in pokemon_list %}
+            <a href="{{ pokemon.get_absolute_url }}" class="list-group-item list-group-item-action">{{ pokemon.name }}</a>
           {% endfor %}
         </div>
       {% else %}
-        <p>Não encontrei nenhuma categoria cadastrada!</p>
+        <p>There are no Pokemons around here.</p>
       {% endif %}
     </div>
   </div>
